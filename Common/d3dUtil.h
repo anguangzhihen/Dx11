@@ -10,6 +10,7 @@
 #include <sstream>
 #include <fstream>
 #include <filesystem>
+#include <d3dcompiler.h>
 #include <DirectXMath.h>
 
 using namespace DirectX;
