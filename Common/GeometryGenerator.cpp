@@ -34,7 +34,6 @@ void GeometryGenerator::CreateGrid(float width, float depth, UINT m, UINT n, Mes
 		}
 	}
 
-
 	// ´´½¨Ë÷Òý
 	meshData.Indices.resize(faceCount * 3);
 	UINT k = 0;
@@ -54,7 +53,4 @@ void GeometryGenerator::CreateGrid(float width, float depth, UINT m, UINT n, Mes
 			k += 6;
 		}
 	}
-
-
-
 }
