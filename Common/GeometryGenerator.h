@@ -34,10 +34,22 @@ public:
 	};
 
 public:
-
 	// 创建一个方块
+	static void CreateBox(float width, float height, float depth, MeshData& meshData);
+	// 创建一个面
 	static void CreateGrid(float width, float depth, UINT m, UINT n, MeshData& meshData);
+	// 创建一个圆柱
+	static void CreateCylinder(float bottomRadius, float topRadius, float height, UINT sliceCount, UINT stackCount, MeshData& meshData);
+	// 圆柱Top圆形
+	static void BuildCylinderTopCap(float bottomRadius, float topRadius, float height, UINT sliceCount, UINT stackCount, MeshData& meshData);
+	// 圆柱Bottom圆形
+	static void BuildCylinderBottomCap(float bottomRadius, float topRadius, float height, UINT sliceCount, UINT stackCount, MeshData& meshData);
+	// 创建球体
+	static void CreateSphere(float radius, UINT sliceCount, UINT stackCount, MeshData& meshData);
+	// 使用纯三角的方式创建球体
+	static void CreateGeosphere(float radius, UINT numSubdivisions, MeshData& meshData);
+	// 细分三角
+	static void Subdivide(MeshData& meshData);
 };
-
 
 #endif

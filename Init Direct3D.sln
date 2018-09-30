@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6 Drawing In Direct
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6_2 Hills Demo", "Chapter 6_2 Hills Demo\Chapter 6_2 Hills Demo.vcxproj", "{39233253-D2DC-44FB-827A-EF6DFC2D2984}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6_3 Shapes Demo", "Chapter 6_3 Shapes Demo\Chapter 6_3 Shapes Demo.vcxproj", "{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{39233253-D2DC-44FB-827A-EF6DFC2D2984}.Release|x64.Build.0 = Release|x64
 		{39233253-D2DC-44FB-827A-EF6DFC2D2984}.Release|x86.ActiveCfg = Release|Win32
 		{39233253-D2DC-44FB-827A-EF6DFC2D2984}.Release|x86.Build.0 = Release|Win32
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Debug|x64.ActiveCfg = Debug|x64
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Debug|x64.Build.0 = Debug|x64
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Debug|x86.ActiveCfg = Debug|Win32
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Debug|x86.Build.0 = Debug|Win32
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Release|x64.ActiveCfg = Release|x64
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Release|x64.Build.0 = Release|x64
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Release|x86.ActiveCfg = Release|Win32
+		{494FE7A5-B6B2-4FCE-A954-A776A8BF2181}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
