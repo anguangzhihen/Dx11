@@ -172,7 +172,7 @@ void BoxApp::BuildFX()
 	ID3DBlob* blob;
 
 	// 创建顶点着色器
-	HR(D3DUtil::CreateShaderFromFile(L"HLSL\\Box_VS.vso", L"HLSL\\Box_VS.hlsl", "VS", "vs_5_0", &blob));
+	HR(D3DUtil::CreateShaderFromFile(L"HLSL\\Color_VS.vso", L"HLSL\\Color_VS.hlsl", "VS", "vs_5_0", &blob));
 	HR(md3dDevice->CreateVertexShader(blob->GetBufferPointer(), blob->GetBufferSize(), nullptr, &mVertexShader));
 
 	// 创建顶点布局
@@ -185,7 +185,7 @@ void BoxApp::BuildFX()
 	ReleaseCOM(blob);
 
 	// 创建像素着色器
-	HR(D3DUtil::CreateShaderFromFile(L"HLSL\\Box_PS.pso", L"HLSL\\Box_PS.hlsl", "PS", "ps_5_0", &blob));
+	HR(D3DUtil::CreateShaderFromFile(L"HLSL\\Color_PS.pso", L"HLSL\\Color_PS.hlsl", "PS", "ps_5_0", &blob));
 	HR(md3dDevice->CreatePixelShader(blob->GetBufferPointer(), blob->GetBufferSize(), nullptr, &mPixelShader));
 	ReleaseCOM(blob);
 

@@ -13,21 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Common">
-      <UniqueIdentifier>{4052fbab-0ea6-4609-82d6-28fd34586830}</UniqueIdentifier>
-    </Filter>
     <Filter Include="HLSL">
-      <UniqueIdentifier>{340a7bf2-0509-40a4-bb7b-a3de70196d3e}</UniqueIdentifier>
+      <UniqueIdentifier>{1cff0b98-32ec-422a-a6da-a232814186f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{df1674a9-4a56-441b-980b-47fe2b39aafe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="BoxDemo.h">
+    <ClInclude Include="SkullDemo.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\Common\d3dApp.h">
@@ -36,16 +39,19 @@
     <ClInclude Include="..\Common\d3dUtil.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\d3dx11effect.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\d3dxGlobal.h">
+      <Filter>Common</Filter>
+    </ClInclude>
     <ClInclude Include="..\Common\dxerr.h">
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Common\GameTimer.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\Common\d3dx11effect.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\d3dxGlobal.h">
+    <ClInclude Include="..\Common\GeometryGenerator.h">
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Common\MathHelper.h">
@@ -56,11 +62,8 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="BoxDemo.cpp">
+    <ClCompile Include="SkullDemo.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Common\GameTimer.cpp">
-      <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="..\Common\d3dApp.cpp">
       <Filter>Common</Filter>
@@ -68,12 +71,18 @@
     <ClCompile Include="..\Common\dxerr.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="..\Common\GameTimer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GeometryGenerator.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
     <ClCompile Include="..\Common\MathHelper.cpp">
       <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Chapter 6 Drawing In Direct3D.rc">
+    <ResourceCompile Include="Chapter 6_4 Skull.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -81,19 +90,19 @@
     <Image Include="small.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="Chapter 6 Drawing In Direct3D.ico">
+    <Image Include="Chapter 6_4 Skull.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="HLSL\Color.fx">
+    <FxCompile Include="HLSL\Color.fx">
       <Filter>HLSL</Filter>
-    </None>
-    <None Include="HLSL\Color_PS.hlsl">
+    </FxCompile>
+    <FxCompile Include="HLSL\Color_PS.hlsl">
       <Filter>HLSL</Filter>
-    </None>
-    <None Include="HLSL\Color_VS.hlsl">
+    </FxCompile>
+    <FxCompile Include="HLSL\Color_VS.hlsl">
       <Filter>HLSL</Filter>
-    </None>
+    </FxCompile>
   </ItemGroup>
 </Project>

@@ -1,5 +1,4 @@
-// Box_VS.hlsl¶¥µã×ÅÉ«Æ÷
-#include "Box.fx"
+#include "Color.fx"
 
 VertexOut VS(VertexIn pIn)
 {

@@ -1,4 +1,3 @@
-// Box.fx
 cbuffer cbPerObject : register(b0)
 {
     row_major matrix wvp;	// 默认列主矩阵
