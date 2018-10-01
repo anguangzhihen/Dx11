@@ -95,7 +95,7 @@ void BoxApp::BuildGeometryBuffers()
 	//};
 
 	// 顶点
-	Vertex vertices[] =
+	std::vector<Vertex> vertices = 
 	{
 		{ XMFLOAT3(-1.0f, 0.0f, -1.0f), XMFLOAT4((const float*)&Colors::Red) },
 		{ XMFLOAT3(-1.0f, 0.0f, +1.0f), XMFLOAT4((const float*)&Colors::Green) },
@@ -108,14 +108,14 @@ void BoxApp::BuildGeometryBuffers()
 	D3D11_BUFFER_DESC vbd;
 	ZeroMemory(&vbd, sizeof(vbd));
 	vbd.Usage = D3D11_USAGE_DEFAULT;
-	vbd.ByteWidth = sizeof vertices;
+	vbd.ByteWidth = sizeof(Vertex) * vertices.size();
 	vbd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 	vbd.CPUAccessFlags = 0;
 
 	// 将顶点设置到描述中
 	D3D11_SUBRESOURCE_DATA InitData;
 	ZeroMemory(&InitData, sizeof(InitData));
-	InitData.pSysMem = vertices;
+	InitData.pSysMem = &vertices[0];
 
 	// 创建缓存
 	HR(md3dDevice->CreateBuffer(&vbd, &InitData, &mBoxVB));
@@ -127,7 +127,8 @@ void BoxApp::BuildGeometryBuffers()
 
 
 	// 创建索引
-	UINT indices[] = {
+	std::vector<UINT> indices =
+	{
 		// 底面
 		0, 2, 1,
 		0, 3, 2,	
@@ -142,12 +143,12 @@ void BoxApp::BuildGeometryBuffers()
 	D3D11_BUFFER_DESC ibd;
 	ZeroMemory(&ibd, sizeof(ibd));
 	ibd.Usage = D3D11_USAGE_DEFAULT;
-	ibd.ByteWidth = sizeof indices;
+	ibd.ByteWidth = sizeof(UINT) * indices.size();
 	ibd.BindFlags = D3D11_BIND_INDEX_BUFFER;
 	ibd.CPUAccessFlags = 0;
 
 	// 将索引设置到描述中
-	InitData.pSysMem = indices;
+	InitData.pSysMem = &indices[0];
 	HR(md3dDevice->CreateBuffer(&ibd, &InitData, &mBoxIB));
 
 	// 绑定到渲染管线上
@@ -229,6 +230,8 @@ void BoxApp::DrawScene()
 	HR(mSwapChain->Present(0, 0));
 }
 
+#pragma region Input
+
 void BoxApp::OnMouseDown(WPARAM btnState, int x, int y)
 {
 	mLastMousePos.x = x;
@@ -272,3 +275,6 @@ void BoxApp::OnMouseMove(WPARAM btnState, int x, int y)
 	mLastMousePos.x = x;
 	mLastMousePos.y = y;
 }
+
+#pragma endregion
+
