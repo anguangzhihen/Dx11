@@ -17,7 +17,7 @@ public:
 	UINT RowCount() const;
 	UINT ColumnCount() const;
 	UINT VertexCount() const;
-	UINT TrangleCount() const;
+	UINT TriangleCount() const;
 
 	const XMFLOAT3& operator[](int i) const { return mCurrSolution[i]; }
 
@@ -36,6 +36,11 @@ private:
 	float mK2;
 	float mK3;
 
+	float mTimeStep;
+	float mSpatialStep;
+
+	XMFLOAT3* mPrevSolution;
+	XMFLOAT3* mCurrSolution;
 
 };
 
