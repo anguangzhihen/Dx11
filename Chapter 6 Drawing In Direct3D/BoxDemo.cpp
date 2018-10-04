@@ -58,6 +58,19 @@ bool BoxApp::Init()
 	BuildGeometryBuffers();
 	BuildFX();
 
+#pragma region 练习6.8
+
+	//D3D11_RASTERIZER_DESC wireframeDesc;
+	//ZeroMemory(&wireframeDesc, sizeof(D3D11_RASTERIZER_DESC));
+	//wireframeDesc.FillMode = D3D11_FILL_WIREFRAME;
+	//wireframeDesc.CullMode = D3D11_CULL_BACK;
+	//wireframeDesc.FrontCounterClockwise = false;
+	//wireframeDesc.DepthClipEnable = true;
+
+	//HR(md3dDevice->CreateRasterizerState(&wireframeDesc, &mWireframeRS));
+
+#pragma endregion
+
 	return true;
 }
 
@@ -104,6 +117,19 @@ void BoxApp::BuildGeometryBuffers()
 		{ XMFLOAT3(0.0f, 1.41f, 0.0f), XMFLOAT4((const float*)&Colors::Black) },
 	};
 
+#pragma region 练习6.4，就是我们探索的方块，只是颜色有点不一样
+
+	//std::vector<Vertex> vertices =
+	//{
+	//	{ XMFLOAT3(-1.0f, 0.0f, -1.0f), XMFLOAT4((const float*)&Colors::Green) },
+	//	{ XMFLOAT3(-1.0f, 0.0f, +1.0f), XMFLOAT4((const float*)&Colors::Green) },
+	//	{ XMFLOAT3(+1.0f, 0.0f, +1.0f), XMFLOAT4((const float*)&Colors::Green) },
+	//	{ XMFLOAT3(+1.0f, 0.0f, -1.0f), XMFLOAT4((const float*)&Colors::Green) },
+	//	{ XMFLOAT3(0.0f, 1.41f, 0.0f), XMFLOAT4((const float*)&Colors::Red) },
+	//};
+
+#pragma endregion
+
 	// 顶点缓存的描述
 	D3D11_BUFFER_DESC vbd;
 	ZeroMemory(&vbd, sizeof(vbd));
@@ -125,6 +151,60 @@ void BoxApp::BuildGeometryBuffers()
 	UINT offset = 0;
 	md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoxVB, &stride, &offset);
 
+#pragma region 练习6.2 运行前将上面的顶点缓存创建给注释掉
+
+	//std::vector<VertexPos> verticesPos =
+	//{
+	//	{ XMFLOAT3(-1.0f, 0.0f, -1.0f) },
+	//	{ XMFLOAT3(-1.0f, 0.0f, +1.0f) },
+	//	{ XMFLOAT3(+1.0f, 0.0f, +1.0f) },
+	//	{ XMFLOAT3(+1.0f, 0.0f, -1.0f) },
+	//	{ XMFLOAT3(0.0f, 1.41f, 0.0f) },
+	//};
+
+	//// 顶点缓存 Position
+	//D3D11_BUFFER_DESC vbdPos;
+	//ZeroMemory(&vbdPos, sizeof(vbdPos));
+	//vbdPos.Usage = D3D11_USAGE_DEFAULT;
+	//vbdPos.ByteWidth = sizeof(VertexPos) * verticesPos.size();
+	//vbdPos.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+	//vbdPos.CPUAccessFlags = 0;
+
+	//D3D11_SUBRESOURCE_DATA InitData;
+	//ZeroMemory(&InitData, sizeof(InitData));
+	//InitData.pSysMem = &verticesPos[0];
+	//HR(md3dDevice->CreateBuffer(&vbdPos, &InitData, &mBoxVB));
+
+	//UINT stride = sizeof(VertexPos);
+	//UINT offset = 0;
+	//md3dImmediateContext->IASetVertexBuffers(0, 2, &mBoxVB, &stride, &offset);
+
+	//std::vector<VertexColor> verticesColor = 
+	//{
+	//	{ XMFLOAT4((const float*)&Colors::Red) },
+	//	{ XMFLOAT4((const float*)&Colors::Green) },
+	//	{ XMFLOAT4((const float*)&Colors::Blue) },
+	//	{ XMFLOAT4((const float*)&Colors::Yellow) },
+	//	{ XMFLOAT4((const float*)&Colors::Black) },
+	//};
+
+	//// 顶点缓存 Color
+	//D3D11_BUFFER_DESC vbdColor;
+	//ZeroMemory(&vbdColor, sizeof(vbdColor));
+	//vbdColor.Usage = D3D11_USAGE_DEFAULT;
+	//vbdColor.ByteWidth = sizeof(VertexColor) * verticesColor.size();
+	//vbdColor.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+	//vbdColor.CPUAccessFlags = 0;
+
+	//ZeroMemory(&InitData, sizeof(InitData));
+	//InitData.pSysMem = &verticesColor[0];
+	//HR(md3dDevice->CreateBuffer(&vbdColor, &InitData, &mBoxVB));
+
+	//stride = sizeof(VertexColor);
+	//offset = 0;
+	//md3dImmediateContext->IASetVertexBuffers(1, 2, &mBoxVB, &stride, &offset);
+
+#pragma endregion
 
 	// 创建索引
 	std::vector<UINT> indices =
@@ -181,6 +261,30 @@ void BoxApp::BuildFX()
 		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
 		{ "COLOR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 }
 	};
+
+#pragma region 练习6.1
+
+	// 练习6.1
+	//D3D11_INPUT_ELEMENT_DESC vertexLayout[6] = {
+	//	{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//	{ "TANGENT", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//	{ "NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 24, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//	{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, 36, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//	{ "TEXCOORD", 1, DXGI_FORMAT_R32G32_FLOAT, 0, 44, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//	{ "COLOR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 52, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 }
+	//};
+
+#pragma endregion
+
+#pragma region 练习6.2 运行前把上面创建顶点布局给注释掉
+
+	//D3D11_INPUT_ELEMENT_DESC vertexLayout[2] = {
+	//	{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//	{ "COLOR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 1, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 }
+	//};
+
+#pragma endregion
+
 	HR(md3dDevice->CreateInputLayout(vertexLayout, ARRAYSIZE(vertexLayout), blob->GetBufferPointer(), blob->GetBufferSize(), &mVertexLayout));
 	md3dImmediateContext->IASetInputLayout(mVertexLayout);// 设定输入布局
 	ReleaseCOM(blob);
@@ -213,6 +317,7 @@ void BoxApp::UpdateScene(float dt)
 	DirectX::XMMATRIX proj = DirectX::XMLoadFloat4x4(&mProj);
 
 	mCBuffer.wvp = world * view * proj;
+	mCBuffer.gTime = mTimer.TotalTime();
 
 	// 更新WVP矩阵数据
 	md3dImmediateContext->UpdateSubresource(mBoxCB, 0, nullptr, &mCBuffer, 0, 0);
@@ -222,6 +327,10 @@ void BoxApp::DrawScene()
 {
 	md3dImmediateContext->ClearRenderTargetView(mRenderTargetView, reinterpret_cast<const float*>(&Colors::LightSteelBlue));
 	md3dImmediateContext->ClearDepthStencilView(mDepthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+
+#pragma region 练习6.8
+	//md3dImmediateContext->RSSetState(mWireframeRS);
+#pragma endregion
 
 	// 绘制Box的36的顶点（12个三角）
 	//md3dImmediateContext->DrawIndexed(36, 0, 0);
