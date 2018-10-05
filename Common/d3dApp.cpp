@@ -388,7 +388,7 @@ void D3DApp::OnResize()
 	mScreenViewport.MinDepth = 0.0f;	// 最小深度
 	mScreenViewport.MaxDepth = 1.0f;	// 最大深度
 
-#pragma region 练习4.6
+#pragma region 练习4.6 可以运行SkullDemo看到效果
 
 	// 练习4.6
 	//mScreenViewport.TopLeftX = 100.0f;
