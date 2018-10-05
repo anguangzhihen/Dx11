@@ -124,14 +124,14 @@ public :
 	}
 };
 
-static UINT RgbaToAbgr(UINT rgba)
+static UINT RgbaToArgb(UINT rgba)
 {
 	BYTE R = (rgba >> 24) & 0xff;
 	BYTE G = (rgba >> 16) & 0xff;
 	BYTE B = (rgba >> 8) & 0xff;
 	BYTE A = (rgba >> 0) & 0xff;
 
-	return (A << 24) | (B << 16) | (G << 8) | (R << 0);
+	return (A << 24) | (R << 16) | (G << 8) | (B << 0);
 }
 
 #endif // !D3DUTIL_H
