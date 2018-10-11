@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 4 Init Direct3D", "Init Direct3D\Init Direct3D.vcxproj", "{24F8AF36-3869-4420-91FD-BF8135865A19}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6 Drawing In Direct3D", "Chapter 6 Drawing In Direct3D\Chapter 6 Drawing In Direct3D.vcxproj", "{52952AF1-1193-44BA-B9BD-A0AC15FFB499}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6 Drawing In Direct3D Box Demo", "Chapter 6 Drawing In Direct3D\Chapter 6 Drawing In Direct3D.vcxproj", "{52952AF1-1193-44BA-B9BD-A0AC15FFB499}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6_2 Hills Demo", "Chapter 6_2 Hills Demo\Chapter 6_2 Hills Demo.vcxproj", "{39233253-D2DC-44FB-827A-EF6DFC2D2984}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6_5 Waves", "Chapter 6_5 Waves\Chapter 6_5 Waves.vcxproj", "{074E5995-341C-4124-B58C-1D2319425A4E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 6_6 Exercise7 BoxAndPryramid", "Chapter 6_6 Exercise7 BoxAndPryramid\Chapter 6_6 Exercise7 BoxAndPryramid.vcxproj", "{DE8F79B2-0BC9-4466-AB87-3F2565CDCF52}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 7_1 Lighting Demo", "Chapter 7_1 Lighting Demo\Chapter 7_1 Lighting Demo.vcxproj", "{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,14 @@ Global
 		{DE8F79B2-0BC9-4466-AB87-3F2565CDCF52}.Release|x64.Build.0 = Release|x64
 		{DE8F79B2-0BC9-4466-AB87-3F2565CDCF52}.Release|x86.ActiveCfg = Release|Win32
 		{DE8F79B2-0BC9-4466-AB87-3F2565CDCF52}.Release|x86.Build.0 = Release|Win32
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Debug|x64.ActiveCfg = Debug|x64
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Debug|x64.Build.0 = Debug|x64
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Debug|x86.ActiveCfg = Debug|Win32
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Debug|x86.Build.0 = Debug|Win32
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Release|x64.ActiveCfg = Release|x64
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Release|x64.Build.0 = Release|x64
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Release|x86.ActiveCfg = Release|Win32
+		{9D0FB9A0-1A14-49E4-99FB-1ABC5341A4D4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
