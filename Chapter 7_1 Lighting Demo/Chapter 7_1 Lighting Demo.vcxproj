@@ -181,13 +181,13 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HLSL\Hills.fx">
+    <None Include="HLSL\Color.fx">
       <FileType>Document</FileType>
     </None>
-    <None Include="HLSL\Hills_PS.hlsl">
+    <None Include="HLSL\Color_PS.hlsl">
       <FileType>Document</FileType>
     </None>
-    <None Include="HLSL\Hills_VS.hlsl">
+    <None Include="HLSL\Color_VS.hlsl">
       <FileType>Document</FileType>
     </None>
   </ItemGroup>

@@ -90,16 +90,16 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="HLSL\Hills.fx">
-      <Filter>HLSL</Filter>
-    </None>
-    <None Include="HLSL\Hills_PS.hlsl">
-      <Filter>HLSL</Filter>
-    </None>
-    <None Include="HLSL\Hills_VS.hlsl">
-      <Filter>HLSL</Filter>
-    </None>
     <None Include="HLSL\LightHelper.fx">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color.fx">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color_VS.hlsl">
       <Filter>HLSL</Filter>
     </None>
   </ItemGroup>

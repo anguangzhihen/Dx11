@@ -1,4 +1,4 @@
-
+// LightHelper.fx
 struct DirectionalLight
 {
 	float4 Ambient;
