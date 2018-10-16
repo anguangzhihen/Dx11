@@ -57,6 +57,9 @@
     <ClInclude Include="LightDemo.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\LightHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

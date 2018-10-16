@@ -156,6 +156,7 @@
     <ClInclude Include="..\Common\dxerr.h" />
     <ClInclude Include="..\Common\GameTimer.h" />
     <ClInclude Include="..\Common\GeometryGenerator.h" />
+    <ClInclude Include="..\Common\LightHelper.h" />
     <ClInclude Include="..\Common\MathHelper.h" />
     <ClInclude Include="LightDemo.h" />
     <ClInclude Include="Resource.h" />

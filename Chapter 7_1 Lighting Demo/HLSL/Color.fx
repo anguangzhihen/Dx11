@@ -10,11 +10,11 @@ cbuffer cbPerFrame : register(b0)
 	float3 gEyePosW;
 };
 
-cbuffer cbPerObject : register(b0)
+cbuffer cbPerObject : register(b1)
 {
     row_major matrix gWorld;	// 默认列主矩阵
 	row_major matrix gWorldInvTranspose;
-	row_major matrix gWorldViewPorj;
+	row_major matrix gWorldViewProj;
 	Material gMaterial;
 };
 
