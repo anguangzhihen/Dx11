@@ -2,20 +2,20 @@
 
 #include "LightHelper.fx"
 
-cbuffer cbPerFrame : register(b0)
+cbuffer cbPerObject : register(b0)
+{
+	row_major matrix gWorld;	// 默认列主矩阵
+	row_major matrix gWorldInvTranspose;
+	row_major matrix gWorldViewProj;
+};
+
+cbuffer cbPerFrame : register(b1)
 {
 	DirectionalLight gDirLight;
 	PointLight gPointLight;
 	SpotLight gSpotLight;
-	float3 gEyePosW;
-};
-
-cbuffer cbPerObject : register(b1)
-{
-    row_major matrix gWorld;	// 默认列主矩阵
-	row_major matrix gWorldInvTranspose;
-	row_major matrix gWorldViewProj;
 	Material gMaterial;
+	float3 gEyePosW;
 };
 
 struct VertexIn

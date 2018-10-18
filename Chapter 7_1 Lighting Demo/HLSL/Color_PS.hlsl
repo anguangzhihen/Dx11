@@ -13,21 +13,25 @@ float4 PS(VertexOut pin) : SV_Target
 
 	float4 A, D, S;
 
+	// 计算直射光
 	ComputeDirectionalLight(gMaterial, gDirLight, pin.NormalW, toEyeW, A, D, S);
 	ambient += A;
 	diffuse += D;
 	spec += S;
 
+	// 计算点光源
 	ComputePointLight(gMaterial, gPointLight, pin.PosW, pin.NormalW, toEyeW, A, D, S);
 	ambient += A;
 	diffuse += D;
 	spec += S;
 
+	// 计算聚光灯
 	ComputeSpotLight(gMaterial, gSpotLight, pin.PosW, pin.NormalW, toEyeW, A, D, S);
 	ambient += A;
 	diffuse += D;
 	spec += S;
 
+	// 叠加所有的光
 	float4 litColor = ambient + diffuse + spec;
 	litColor.a = gMaterial.Diffuse.a;
 
