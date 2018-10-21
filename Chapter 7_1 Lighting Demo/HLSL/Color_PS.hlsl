@@ -21,11 +21,9 @@ float4 PS(VertexOut pin) : SV_Target
 
 	// 计算点光源
 	ComputePointLight(gMaterial, gPointLight, pin.PosW, pin.NormalW, toEyeW, A, D, S);
-	/*ambient += A;
+	ambient += A;
 	diffuse += D;
-	spec += S;*/
-
-	diffuse += float4(gPointLight.Att, 0);
+	spec += S;
 
 	// 计算聚光灯
 	ComputeSpotLight(gMaterial, gSpotLight, pin.PosW, pin.NormalW, toEyeW, A, D, S);
