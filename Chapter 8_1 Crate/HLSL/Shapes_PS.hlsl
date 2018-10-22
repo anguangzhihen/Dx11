@@ -1,5 +1,14 @@
 #include "Shapes.fx"
 
+//SamplerState samAnisotropic
+//{
+//	Filter = ANISOTROPIC;
+//	MaxAnisotropy = 4;
+//
+//	AddressU = WRAP;
+//	AddressV = WRAP;
+//};
+
 float4 PS(VertexOut pin) : SV_Target
 {
 	pin.NormalW = normalize(pin.NormalW);
@@ -18,8 +27,11 @@ float4 PS(VertexOut pin) : SV_Target
 	diffuse += D;
 	spec += S;
 
+	// 对图片进行采样
+	float4 texColor = tex.Sample(sam, pin.Tex);
+
 	// 叠加所有的光
-	float4 litColor = ambient + diffuse + spec;
+	float4 litColor = texColor * (ambient + diffuse) + spec;
 	litColor.a = gMaterial.Diffuse.a;
 
 	return litColor;

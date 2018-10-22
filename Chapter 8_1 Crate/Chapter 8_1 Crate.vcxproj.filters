@@ -19,6 +19,12 @@
     <Filter Include="HLSL">
       <UniqueIdentifier>{060df863-0cdc-48d3-84eb-79efbcc11326}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DXTK">
+      <UniqueIdentifier>{4aad89a4-aeb6-4526-8ee8-0ac661e14a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{5706352c-12e1-4936-914d-c5666f423734}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -56,6 +62,66 @@
     </ClInclude>
     <ClInclude Include="ShapesDemo.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\Audio.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\CommonStates.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\DDSTextureLoader.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\DirectXHelpers.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\Effects.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\GamePad.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\GeometricPrimitive.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\GraphicsMemory.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\Keyboard.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\Model.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\Mouse.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\PostProcess.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\PrimitiveBatch.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\ScreenGrab.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\SimpleMath.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\SpriteBatch.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\SpriteFont.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\VertexTypes.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\WICTextureLoader.h">
+      <Filter>DXTK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DXTK\XboxDDSTextureLoader.h">
+      <Filter>DXTK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -102,10 +168,21 @@
     <None Include="HLSL\LightHelper.fx">
       <Filter>HLSL</Filter>
     </None>
+    <None Include="..\Common\DXTK\SimpleMath.inl">
+      <Filter>DXTK</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Chapter 8_1 Crate.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Common\libs\DirectXTK.lib">
+      <Filter>libs</Filter>
+    </Library>
+    <Library Include="..\Common\libs\Effects11d.lib">
+      <Filter>libs</Filter>
+    </Library>
   </ItemGroup>
 </Project>

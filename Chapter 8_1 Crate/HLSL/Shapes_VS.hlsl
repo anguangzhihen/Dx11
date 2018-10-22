@@ -10,5 +10,8 @@ VertexOut VS(VertexIn vin)
 
 	vout.PosH = mul(float4(vin.PosL, 1.0f), gWorldViewProj);
 
+	// 使用矩阵裁剪当前的Tex值
+	vout.Tex = mul(float4(vin.Tex, 0.0f, 1.0f), gTexTransform).xy;
+
 	return vout;
 }
