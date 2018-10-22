@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 7_1 Lighting Demo",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 7_2 SkullLit", "Chapter 7_2 SkullLit\Chapter 7_2 SkullLit.vcxproj", "{A82B5916-9832-4293-AA83-92B592092CDB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 8_1 Crate", "Chapter 8_1 Crate\Chapter 8_1 Crate.vcxproj", "{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{A82B5916-9832-4293-AA83-92B592092CDB}.Release|x64.Build.0 = Release|x64
 		{A82B5916-9832-4293-AA83-92B592092CDB}.Release|x86.ActiveCfg = Release|Win32
 		{A82B5916-9832-4293-AA83-92B592092CDB}.Release|x86.Build.0 = Release|Win32
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Debug|x64.ActiveCfg = Debug|x64
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Debug|x64.Build.0 = Debug|x64
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Debug|x86.ActiveCfg = Debug|Win32
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Debug|x86.Build.0 = Debug|Win32
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Release|x64.ActiveCfg = Release|x64
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Release|x64.Build.0 = Release|x64
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Release|x86.ActiveCfg = Release|Win32
+		{FDBDE334-0ED6-48F2-89D0-0E93CD0FED4C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
