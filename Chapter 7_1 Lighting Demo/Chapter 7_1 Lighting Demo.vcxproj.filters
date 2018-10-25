@@ -60,6 +60,9 @@
     <ClInclude Include="..\Common\LightHelper.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\Waves.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -82,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="LightDemo.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Waves.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
