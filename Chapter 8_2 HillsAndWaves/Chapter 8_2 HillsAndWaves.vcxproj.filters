@@ -14,10 +14,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Common">
-      <UniqueIdentifier>{1f2fe9c7-74f4-49ac-8830-f3dd641d1841}</UniqueIdentifier>
+      <UniqueIdentifier>{e10fafbb-5fab-48dd-a76f-5e899280845f}</UniqueIdentifier>
     </Filter>
     <Filter Include="HLSL">
-      <UniqueIdentifier>{5570b34e-8ef0-47af-9a45-88d87a6cc423}</UniqueIdentifier>
+      <UniqueIdentifier>{b95052e3-7ee2-4958-9d9e-5807cd451d1c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -48,14 +48,17 @@
     <ClInclude Include="..\Common\GameTimer.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\Common\GeometryGenerator.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="..\Common\MathHelper.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="WavesDemo.h">
+    <ClInclude Include="..\Common\GeometryGenerator.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LightDemo.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\LightHelper.h">
+      <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Common\Waves.h">
       <Filter>Common</Filter>
@@ -74,13 +77,13 @@
     <ClCompile Include="..\Common\GameTimer.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="..\Common\GeometryGenerator.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="..\Common\MathHelper.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="WavesDemo.cpp">
+    <ClCompile Include="..\Common\GeometryGenerator.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="LightDemo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\Common\Waves.cpp">
@@ -88,21 +91,30 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Chapter 6_5 Waves.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="small.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="Chapter 6_5 Waves.ico">
+    <Image Include="Chapter 8_2 HillsAndWaves.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="HLSL\Color.fx" />
-    <None Include="HLSL\Color_PS.hlsl" />
-    <None Include="HLSL\Color_VS.hlsl" />
+    <None Include="HLSL\LightHelper.fx">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color.fx">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Chapter 8_2 HillsAndWaves.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

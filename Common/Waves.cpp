@@ -121,5 +121,47 @@ void Waves::Disturb(UINT i, UINT j, float magnitude)
 	mCurrSolution[(i-1)*mNumCols + j].y += halfMag;
 }
 
+void Waves::CommonDisturbUpdate(float totalTime, float dt)
+{
+	// 每0.25秒更新产生一次波纹
+	static float t_base = 0.0f;
+	if ((totalTime - t_base) >= 0.25f)
+	{
+		t_base += 0.25f;
+		DWORD i = 5 + rand() % 190;
+		DWORD j = 5 + rand() % 190;
+		float r = MathHelper::RandF(1.0f, 2.0f);
+		Disturb(i, j, r);
+	}
 
+	// 每帧更新Wave
+	Update(dt);
+}
+
+std::vector<UINT> Waves::GetIndices() 
+{
+
+	std::vector<UINT> indices(3 * TriangleCount());
+
+	UINT m = RowCount();
+	UINT n = ColumnCount();
+	int k = 0;
+	for (UINT i = 0; i < m - 1; i++)
+	{
+		for (DWORD j = 0; j < n - 1; j++)
+		{
+			indices[k] = i * n + j;
+			indices[k + 1] = i * n + j + 1;
+			indices[k + 2] = (i + 1) * n + j;
+
+			indices[k + 3] = (i + 1) * n + j;
+			indices[k + 4] = i * n + j + 1;
+			indices[k + 5] = (i + 1) * n + j + 1;
+
+			k += 6;
+		}
+	}
+
+	return indices;
+}
 

@@ -5,6 +5,9 @@
 
 #include <Windows.h>
 #include <DirectXMath.h>
+#include <vector>
+
+#include "MathHelper.h"
 
 using namespace DirectX;
 
@@ -24,6 +27,9 @@ public:
 	void Init(UINT m, UINT n, float dx, float dt, float speed, float damping);
 	void Update(float dt);
 	void Disturb(UINT i, UINT j, float magnitude);
+	void CommonDisturbUpdate(float totalTime, float dt);
+
+	std::vector<UINT> GetIndices();
 
 private:
 	UINT mNumRows;
@@ -43,9 +49,5 @@ private:
 	XMFLOAT3* mCurrSolution;
 
 };
-
-
-
-
 
 #endif
