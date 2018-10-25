@@ -22,7 +22,10 @@ public:
 	UINT VertexCount() const;
 	UINT TriangleCount() const;
 
-	const XMFLOAT3& operator[](int i) const { return mCurrSolution[i]; }
+	const XMFLOAT3& operator[](int i) const { return mCurrSolution[i]; }	// 获取当前顶点
+	const XMFLOAT3& Normal(int i) const { return mNormals[i]; }	// 获取法线
+	const XMFLOAT3& TangentX(int i) const { return mTangentX[i]; }	// 获取当前的切线
+	
 
 	void Init(UINT m, UINT n, float dx, float dt, float speed, float damping);
 	void Update(float dt);
@@ -47,7 +50,8 @@ private:
 
 	XMFLOAT3* mPrevSolution;
 	XMFLOAT3* mCurrSolution;
-
+	XMFLOAT3* mNormals;
+	XMFLOAT3* mTangentX;
 };
 
 #endif
