@@ -39,6 +39,16 @@ UINT Waves::TriangleCount() const
 	return mTriangleCount;
 }
 
+float Waves::Width()const
+{
+	return mNumCols * mSpatialStep;
+}
+
+float Waves::Depth()const
+{
+	return mNumRows * mSpatialStep;
+}
+
 void Waves::Init(UINT m, UINT n, float dx, float dt, float speed, float damping)
 {
 	mNumRows = m;

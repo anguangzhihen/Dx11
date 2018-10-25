@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../Common;$(IncludePath)</IncludePath>
+    <IncludePath>../Common;../Common/DXTK;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -154,6 +154,26 @@
     <ClInclude Include="..\Common\d3dx11effect.h" />
     <ClInclude Include="..\Common\d3dxGlobal.h" />
     <ClInclude Include="..\Common\dxerr.h" />
+    <ClInclude Include="..\Common\DXTK\Audio.h" />
+    <ClInclude Include="..\Common\DXTK\CommonStates.h" />
+    <ClInclude Include="..\Common\DXTK\DDSTextureLoader.h" />
+    <ClInclude Include="..\Common\DXTK\DirectXHelpers.h" />
+    <ClInclude Include="..\Common\DXTK\Effects.h" />
+    <ClInclude Include="..\Common\DXTK\GamePad.h" />
+    <ClInclude Include="..\Common\DXTK\GeometricPrimitive.h" />
+    <ClInclude Include="..\Common\DXTK\GraphicsMemory.h" />
+    <ClInclude Include="..\Common\DXTK\Keyboard.h" />
+    <ClInclude Include="..\Common\DXTK\Model.h" />
+    <ClInclude Include="..\Common\DXTK\Mouse.h" />
+    <ClInclude Include="..\Common\DXTK\PostProcess.h" />
+    <ClInclude Include="..\Common\DXTK\PrimitiveBatch.h" />
+    <ClInclude Include="..\Common\DXTK\ScreenGrab.h" />
+    <ClInclude Include="..\Common\DXTK\SimpleMath.h" />
+    <ClInclude Include="..\Common\DXTK\SpriteBatch.h" />
+    <ClInclude Include="..\Common\DXTK\SpriteFont.h" />
+    <ClInclude Include="..\Common\DXTK\VertexTypes.h" />
+    <ClInclude Include="..\Common\DXTK\WICTextureLoader.h" />
+    <ClInclude Include="..\Common\DXTK\XboxDDSTextureLoader.h" />
     <ClInclude Include="..\Common\GameTimer.h" />
     <ClInclude Include="..\Common\GeometryGenerator.h" />
     <ClInclude Include="..\Common\LightHelper.h" />
@@ -184,6 +204,7 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Common\DXTK\SimpleMath.inl" />
     <None Include="HLSL\Color.fx">
       <FileType>Document</FileType>
     </None>
@@ -201,6 +222,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Chapter 8_2 HillsAndWaves.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Common\libs\DirectXTK.lib" />
+    <Library Include="..\Common\libs\Effects11d.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

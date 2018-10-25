@@ -21,6 +21,8 @@ public:
 	UINT ColumnCount() const;
 	UINT VertexCount() const;
 	UINT TriangleCount() const;
+	float Width()const;
+	float Depth()const;
 
 	const XMFLOAT3& operator[](int i) const { return mCurrSolution[i]; }	// 获取当前顶点
 	const XMFLOAT3& Normal(int i) const { return mNormals[i]; }	// 获取法线
