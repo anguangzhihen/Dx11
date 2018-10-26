@@ -64,7 +64,7 @@ float ToonSpecular(float ks)
 	return 0.8f;
 }
 
-
+// 计算直射光
 void ComputeDirectionalLight(Material mat, DirectionalLight L,
 	float3 normal, float3 toEye,
 	out float4 ambient, out float4 diffuse, out float4 spec)
@@ -100,6 +100,7 @@ void ComputeDirectionalLight(Material mat, DirectionalLight L,
 	}
 }
 
+// 计算点光源
 void ComputePointLight(Material mat, PointLight L,
 	float3 pos, float3 normal, float3 toEye,
 	out float4 ambient, out float4 diffuse, out float4 spec)
@@ -144,6 +145,7 @@ void ComputePointLight(Material mat, PointLight L,
 	}
 }
 
+// 计算聚光灯
 void ComputeSpotLight(Material mat, SpotLight L,
 	float3 pos, float3 normal, float3 toEye,
 	out float4 ambient, out float4 diffuse, out float4 spec)
