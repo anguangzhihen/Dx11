@@ -13,5 +13,8 @@ VertexOut VS(VertexIn vin)
 	// 使用矩阵变换当前的Tex值
 	vout.Tex = mul(float4(vin.Tex, 0.0f, 1.0f), gTexTransform).xy;
 
+	//// Shader
+	//vout.Tex = mul(float4(vin.Tex - float2(0.5f, 0.5f), 0.0f, 1.0f), gTexTransform).xy;	// 练习8.4
+
 	return vout;
 }

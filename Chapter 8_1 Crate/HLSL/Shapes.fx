@@ -1,6 +1,7 @@
 #include "LightHelper.fx"
 
 Texture2D tex : register(t0);
+Texture2D tex2 : register(t1);
 SamplerState sam : register(s0);
 
 cbuffer cbPerObject : register(b0)
