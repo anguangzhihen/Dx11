@@ -29,7 +29,6 @@ float4 PS(VertexOut pin) : SV_Target
 
 	// 对图片进行采样
 	float4 texColor = tex.Sample(sam, pin.Tex);
-
 	// 叠加所有的光
 	float4 litColor = texColor * (ambient + diffuse) + spec;
 	litColor.a = gMaterial.Diffuse.a;
