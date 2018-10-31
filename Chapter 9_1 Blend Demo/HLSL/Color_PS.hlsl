@@ -44,7 +44,8 @@ float4 PS(VertexOut pin) : SV_Target
 		litColor = lerp(litColor, gFogColor, fogLerp);
 	}
 
-	litColor.a = gMaterial.Diffuse.a;
+	litColor.a = gMaterial.Diffuse.a * texColor.a;
+	//litColor.a = 0.5f;
 
 	return litColor;
 }
