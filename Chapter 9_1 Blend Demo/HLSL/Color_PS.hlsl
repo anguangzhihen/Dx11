@@ -5,6 +5,7 @@ float4 PS(VertexOut pin) : SV_Target
 {
 	pin.NormalW = normalize(pin.NormalW);
 
+	float distToEye = length(gEyePosW - pin.PosW);
 	float3 toEyeW = normalize(gEyePosW - pin.PosW);
 
 	float4 ambient = float4(0.0f, 0.0f, 0.0f, 0.0f);
@@ -27,6 +28,14 @@ float4 PS(VertexOut pin) : SV_Target
 
 	// 叠加所有的光
 	float4 litColor = texColor*(ambient + diffuse) + spec;
+
+	bool gFogEnabled = true;
+	if (gFogEnabled)
+	{
+		float fogLerp = saturate((distToEye - gFogPos.x) / gFogPos.y);
+		litColor = lerp(litColor, gFogColor, fogLerp);
+	}
+
 	litColor.a = gMaterial.Diffuse.a;
 
 	return litColor;

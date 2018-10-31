@@ -45,26 +45,6 @@ struct Material
 	float4 Reflect;
 };
 
-// 练习7.3 将下面所有Toon函数的调用都解除注释即可
-float ToonDiffuse(float kd)
-{
-	if (kd <= 0.0f)
-		return 0.4f;
-	if (kd <= 0.5f)
-		return 0.6f;
-	return 1.0f;
-}
-
-float ToonSpecular(float ks)
-{
-	if (ks <= 0.1f)
-		return 0.0f;
-	if (ks <= 0.8f)
-		return 0.5f;
-	return 0.8f;
-}
-
-
 void ComputeDirectionalLight(Material mat, DirectionalLight L,
 	float3 normal, float3 toEye,
 	out float4 ambient, out float4 diffuse, out float4 spec)
@@ -79,7 +59,6 @@ void ComputeDirectionalLight(Material mat, DirectionalLight L,
 
 	float3 lightVec = -L.Direction;	// 获取light的向量
 	float diffuseFactor = dot(lightVec, normal);	// 漫反射的强度
-	//diffuseFactor = ToonDiffuse(diffuseFactor);
 
 	[flatten]
 	if (diffuseFactor > 0.0f)
@@ -90,12 +69,11 @@ void ComputeDirectionalLight(Material mat, DirectionalLight L,
 		// 高光的计算
 		float3 v = reflect(-lightVec, normal);	// 计算反射角
 		float specFactor = pow(max(dot(v, toEye), 0.0f), mat.Specular.w);	// 高光的衰减程度
-		//specFactor = ToonSpecular(specFactor);
 		spec = specFactor * mat.Specular * L.Specular;
 
 		// Blinn的方式
 		//float3 h = normalize(toEye + lightVec);
-		//specFactor = pow(max(dot(h, normal), 0.0f), mat.Specular.w);
+		//float specFactor = pow(max(dot(h, normal), 0.0f), mat.Specular.w);
 		//spec = specFactor * mat.Specular * L.Specular;
 	}
 }
@@ -122,7 +100,6 @@ void ComputePointLight(Material mat, PointLight L,
 	ambient = mat.Ambient * L.Ambient;
 
 	float diffuseFactor = dot(lightVec, normal);	// 漫反射的强度
-	//diffuseFactor = ToonDiffuse(diffuseFactor);
 
 	[flatten]
 	if (diffuseFactor > 0.0f)
@@ -133,7 +110,6 @@ void ComputePointLight(Material mat, PointLight L,
 		// 高光的计算
 		float3 v = reflect(-lightVec, normal);	// 计算反射角
 		float specFactor = pow(max(dot(v, toEye), 0.0f), mat.Specular.w);	// 高光的衰减程度
-		//specFactor = ToonSpecular(specFactor);
 		spec = specFactor * mat.Specular * L.Specular;
 
 		// 衰减
@@ -167,7 +143,6 @@ void ComputeSpotLight(Material mat, SpotLight L,
 	 ambient *= spot;
 	 
 	 float diffuseFactor = dot(lightVec, normal);	// 漫反射的强度
-	 //diffuseFactor = ToonDiffuse(diffuseFactor);
 
 	 [flatten]
 	 if (diffuseFactor > 0.0f)
@@ -178,8 +153,7 @@ void ComputeSpotLight(Material mat, SpotLight L,
 	 	// 高光的计算
 	 	float3 v = reflect(-lightVec, normal);	// 计算反射角
 	 	float specFactor = pow(max(dot(v, toEye), 0.0f), mat.Specular.w);	// 高光的衰减程度
-		//specFactor = ToonSpecular(specFactor);
-		spec = specFactor * mat.Specular * L.Specular;
+	 	spec = specFactor * mat.Specular * L.Specular;
 
 		// 衰减
 		float att = spot / dot(L.Att, float3(1.0f, d, d * d));

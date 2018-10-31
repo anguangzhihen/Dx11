@@ -18,6 +18,9 @@ cbuffer cbPerFrame : register(b1)
 	DirectionalLight gDirLights[3];
 	Material gMaterial;
 	float3 gEyePosW;
+
+	float2 gFogPos;
+	float4 gFogColor;
 };
 
 struct VertexIn
