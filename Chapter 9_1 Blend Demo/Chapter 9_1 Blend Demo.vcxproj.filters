@@ -129,6 +129,9 @@
     <ClInclude Include="..\Common\DXTK\XboxDDSTextureLoader.h">
       <Filter>DXTK</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\RenderStates.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -153,6 +156,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\Common\Waves.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\RenderStates.cpp">
       <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>

@@ -8,6 +8,16 @@ float4 PS(VertexOut pin) : SV_Target
 	float distToEye = length(gEyePosW - pin.PosW);
 	float3 toEyeW = normalize(gEyePosW - pin.PosW);
 
+	// 对图片进行采样
+	float4 texColor = tex.Sample(sam, pin.Tex);
+
+	// clip透明的部分
+	bool gAlphaClip = true;
+	if (gAlphaClip)
+	{
+		clip(texColor.a - 0.1f);
+	}
+
 	float4 ambient = float4(0.0f, 0.0f, 0.0f, 0.0f);
 	float4 diffuse = float4(0.0f, 0.0f, 0.0f, 0.0f);
 	float4 spec = float4(0.0f, 0.0f, 0.0f, 0.0f);
@@ -23,12 +33,10 @@ float4 PS(VertexOut pin) : SV_Target
 		spec += S;
 	}
 
-	// 对图片进行采样
-	float4 texColor = tex.Sample(sam, pin.Tex);
-
 	// 叠加所有的光
 	float4 litColor = texColor*(ambient + diffuse) + spec;
 
+	// 雾
 	bool gFogEnabled = true;
 	if (gFogEnabled)
 	{

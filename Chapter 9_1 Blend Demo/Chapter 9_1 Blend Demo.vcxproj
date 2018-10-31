@@ -178,6 +178,7 @@
     <ClInclude Include="..\Common\GeometryGenerator.h" />
     <ClInclude Include="..\Common\LightHelper.h" />
     <ClInclude Include="..\Common\MathHelper.h" />
+    <ClInclude Include="..\Common\RenderStates.h" />
     <ClInclude Include="..\Common\Waves.h" />
     <ClInclude Include="LightDemo.h" />
     <ClInclude Include="Resource.h" />
@@ -190,6 +191,7 @@
     <ClCompile Include="..\Common\GameTimer.cpp" />
     <ClCompile Include="..\Common\GeometryGenerator.cpp" />
     <ClCompile Include="..\Common\MathHelper.cpp" />
+    <ClCompile Include="..\Common\RenderStates.cpp" />
     <ClCompile Include="..\Common\Waves.cpp" />
     <ClCompile Include="LightDemo.cpp" />
     <ClCompile Include="stdafx.cpp">

@@ -101,8 +101,14 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="HLSL\Color.fx" />
-    <None Include="HLSL\Color_PS.hlsl" />
-    <None Include="HLSL\Color_VS.hlsl" />
+    <None Include="HLSL\Color.fx">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\Color_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </None>
   </ItemGroup>
 </Project>
