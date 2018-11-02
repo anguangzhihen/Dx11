@@ -31,6 +31,7 @@ void RenderStates::InitAll(ID3D11Device* device)
 	alphaToCoverageDesc.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
 	HR(device->CreateBlendState(&alphaToCoverageDesc, &AlphaToCoverageBS));
 
+	// ´´½¨»ìºÏ×´Ì¬
 	D3D11_BLEND_DESC transparentDesc = { 0 };
 	transparentDesc.AlphaToCoverageEnable = false;
 	transparentDesc.IndependentBlendEnable = false;
