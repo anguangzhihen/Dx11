@@ -43,6 +43,22 @@ void RenderStates::InitAll(ID3D11Device* device)
 	transparentDesc.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ZERO;
 	transparentDesc.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;
 	transparentDesc.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
+
+#pragma region Á·Ï°9.2
+
+	//// µş¼Ó»ìºÏ
+	//transparentDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
+	//transparentDesc.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
+	//transparentDesc.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+
+#pragma endregion
+
+#pragma region Á·Ï°9.6
+
+	transparentDesc.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_BLUE | D3D11_COLOR_WRITE_ENABLE_ALPHA;
+
+#pragma endregion
+
 	HR(device->CreateBlendState(&transparentDesc, &TransparentBS));
 }
 
