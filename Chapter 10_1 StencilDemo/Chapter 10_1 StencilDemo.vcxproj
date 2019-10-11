@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{D34C6173-027D-4032-97E0-AD357E30F521}</ProjectGuid>
+    <ProjectGuid>{45DCB46A-3A11-4B41-9C9D-E872148513D2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Chapter62HillsDemo</RootNamespace>
+    <RootNamespace>Chapter63ShapesDemo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../Common;../Common/DXTK;$(IncludePath)</IncludePath>
+    <IncludePath>../Common;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -154,34 +154,10 @@
     <ClInclude Include="..\Common\d3dx11effect.h" />
     <ClInclude Include="..\Common\d3dxGlobal.h" />
     <ClInclude Include="..\Common\dxerr.h" />
-    <ClInclude Include="..\Common\DXTK\Audio.h" />
-    <ClInclude Include="..\Common\DXTK\CommonStates.h" />
-    <ClInclude Include="..\Common\DXTK\DDSTextureLoader.h" />
-    <ClInclude Include="..\Common\DXTK\DirectXHelpers.h" />
-    <ClInclude Include="..\Common\DXTK\Effects.h" />
-    <ClInclude Include="..\Common\DXTK\GamePad.h" />
-    <ClInclude Include="..\Common\DXTK\GeometricPrimitive.h" />
-    <ClInclude Include="..\Common\DXTK\GraphicsMemory.h" />
-    <ClInclude Include="..\Common\DXTK\Keyboard.h" />
-    <ClInclude Include="..\Common\DXTK\Model.h" />
-    <ClInclude Include="..\Common\DXTK\Mouse.h" />
-    <ClInclude Include="..\Common\DXTK\PostProcess.h" />
-    <ClInclude Include="..\Common\DXTK\PrimitiveBatch.h" />
-    <ClInclude Include="..\Common\DXTK\ScreenGrab.h" />
-    <ClInclude Include="..\Common\DXTK\SimpleMath.h" />
-    <ClInclude Include="..\Common\DXTK\SpriteBatch.h" />
-    <ClInclude Include="..\Common\DXTK\SpriteFont.h" />
-    <ClInclude Include="..\Common\DXTK\VertexTypes.h" />
-    <ClInclude Include="..\Common\DXTK\WICTextureLoader.h" />
-    <ClInclude Include="..\Common\DXTK\XboxDDSTextureLoader.h" />
     <ClInclude Include="..\Common\GameTimer.h" />
     <ClInclude Include="..\Common\GeometryGenerator.h" />
-    <ClInclude Include="..\Common\LightHelper.h" />
     <ClInclude Include="..\Common\MathHelper.h" />
-    <ClInclude Include="..\Common\RenderStates.h" />
-    <ClInclude Include="..\Common\Waves.h" />
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\um\d3d11.h" />
-    <ClInclude Include="LightDemo.h" />
+    <ClInclude Include="ShapesDemo.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -192,9 +168,7 @@
     <ClCompile Include="..\Common\GameTimer.cpp" />
     <ClCompile Include="..\Common\GeometryGenerator.cpp" />
     <ClCompile Include="..\Common\MathHelper.cpp" />
-    <ClCompile Include="..\Common\RenderStates.cpp" />
-    <ClCompile Include="..\Common\Waves.cpp" />
-    <ClCompile Include="LightDemo.cpp" />
+    <ClCompile Include="ShapesDemo.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -203,18 +177,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Chapter 9_1 Blend Demo.ico" />
+    <Image Include="Chapter 10_1 StencilDemo.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Common\DXTK\SimpleMath.inl" />
-    <None Include="HLSL\Color.fx">
+    <None Include="HLSL\Shapes.fx">
       <FileType>Document</FileType>
     </None>
-    <None Include="HLSL\Color_PS.hlsl">
+    <None Include="HLSL\Shapes_PS.hlsl">
       <FileType>Document</FileType>
     </None>
-    <None Include="HLSL\Color_VS.hlsl">
+    <None Include="HLSL\Shapes_VS.hlsl">
       <FileType>Document</FileType>
     </None>
   </ItemGroup>
@@ -224,11 +197,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\Common\libs\DirectXTK.lib" />
-    <Library Include="..\Common\libs\Effects11d.lib" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Chapter 9_1 Blend Demo.rc" />
+    <ResourceCompile Include="Chapter 10_1 StencilDemo.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

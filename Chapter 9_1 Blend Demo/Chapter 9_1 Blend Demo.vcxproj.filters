@@ -132,6 +132,9 @@
     <ClInclude Include="..\Common\RenderStates.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\um\d3d11.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

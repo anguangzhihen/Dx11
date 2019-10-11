@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 8_3 Excecise7 Skull
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 9_1 Blend Demo", "Chapter 9_1 Blend Demo\Chapter 9_1 Blend Demo.vcxproj", "{D34C6173-027D-4032-97E0-AD357E30F521}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter 10_1 StencilDemo", "Chapter 10_1 StencilDemo\Chapter 10_1 StencilDemo.vcxproj", "{45DCB46A-3A11-4B41-9C9D-E872148513D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{D34C6173-027D-4032-97E0-AD357E30F521}.Release|x64.Build.0 = Release|x64
 		{D34C6173-027D-4032-97E0-AD357E30F521}.Release|x86.ActiveCfg = Release|Win32
 		{D34C6173-027D-4032-97E0-AD357E30F521}.Release|x86.Build.0 = Release|Win32
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Debug|x64.ActiveCfg = Debug|x64
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Debug|x64.Build.0 = Debug|x64
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Debug|x86.ActiveCfg = Debug|Win32
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Debug|x86.Build.0 = Debug|Win32
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Release|x64.ActiveCfg = Release|x64
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Release|x64.Build.0 = Release|x64
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Release|x86.ActiveCfg = Release|Win32
+		{45DCB46A-3A11-4B41-9C9D-E872148513D2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
